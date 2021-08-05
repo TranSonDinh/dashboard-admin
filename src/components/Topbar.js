@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../assets/images/logo.png";
 import LogoName from '../assets/images/download.png';
@@ -31,10 +31,11 @@ function Topbar() {
     const [logoName, setLogoName] = useState(false);
     const [widthLeft, setWidthLeft] = useState(65);
     const [select, setSelect] = useState(false);
+
     const handlesShowName = () => {
         setLogoName(!logoName);
-        if (widthLeft === 65) setWidthLeft(240);
-        if (widthLeft === 240) setWidthLeft(65);
+        if (widthLeft === 65) setWidthLeft(240)
+        else if (widthLeft === 240) setWidthLeft(65);
 
     };
     const handlesSelect = () => {
@@ -60,28 +61,28 @@ function Topbar() {
                             <li className="nav-item">
                                 <Link to="#">
                                     <IoIosNotifications />
-                                    <Dropdown color="#7460ee" totalNoti={listNoti.length} strNoti="Notifications" strLink="Check all notifications" item={listNoti} />
                                 </Link>
+                                <Dropdown color="#7460ee" totalNoti={listNoti.length} strNoti="Notifications" strLink="Check all notifications" item={listNoti} />
                             </li>
                             <li className="nav-item">
                                 <Link to="#">
                                     <FiMessageSquare />
-                                    <Dropdown color="#fc4b6c" totalNoti={listMess.length} strNoti="Messages" strLink="Sell all e-Mails" item={listMess} />
                                 </Link>
+                                <Dropdown color="#fc4b6c" totalNoti={listMess.length} strNoti="Messages" strLink="Sell all e-Mails" item={listMess} />
                             </li>
                             <li className="nav-item">
                                 <Link to="#">
                                     {/.*(jpg|png|PNG|JPG|svg|SVG)/g.exec(user.avatar) && <img src={require(`../assets/images/${user.avatar}`).default} alt="avatar" className="topnav-avatar" />}
                                     {!user.avatar && <FaUserCircle />}
-                                    <DropdownAvatar color="#7460ee" avatar={user.avatar} name={user.name} email={user.email} />
                                 </Link>
+                                <DropdownAvatar color="#7460ee" avatar={user.avatar} name={user.name} email={user.email} />
                             </li>
                         </ul>
                     </div>
                 </nav>
             </header>
             <aside className="left-sidebar" id="sidebarbg" style={{ width: `${widthLeft}px` }}
-                onMouseOver={select ? "" : handlesShowName} onMouseOut={select ? "" : handlesShowName}>
+                onMouseOver={select ? null : handlesShowName} onMouseOut={select ? null : handlesShowName}>
                 <LeftSideBar showUserName={widthLeft === 65 ? false : true} />
             </aside>
         </>
