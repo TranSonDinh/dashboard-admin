@@ -15,7 +15,7 @@ function Dropdown(props) {
             </div>
             <div className="drop-content">
                 {item.map((item, index) => {
-                    return (<MessageItem type={item.type} title={item.title} mail={item.mail} time={item.time} />);
+                    return (<MessageItem type={item.type} title={item.title} mail={item.mail} time={item.time} key={index} />);
                 })}
             </div>
             <Link to="" className="nav-link">

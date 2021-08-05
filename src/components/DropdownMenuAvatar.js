@@ -5,15 +5,15 @@ import { MdAccountBalanceWallet } from 'react-icons/md';
 import { AiFillSetting } from 'react-icons/ai';
 
 function Dropdown(props) {
-    const { avatar, color } = props;
+    const { avatar, color, name, email } = props;
     return (
         <div className="dropdown-menu dropdown-user">
             <span className="bg-primary" style={{ backgroundColor: color }}></span>
             <div className="dropdown-user_title" style={{ backgroundColor: color }}>
                 {/.*(jpg|png|PNG|JPG|svg|SVG)/g.exec(avatar) && <img src={require(`../assets/images/${avatar}`).default} alt="avatar" className="dropdown-avatar" />}
                 <div>
-                    <h5>Dinh Jobs</h5>
-                    <p>sondinh2703@gmai.com</p>
+                    <h5>{name}</h5>
+                    <p>{email}</p>
                 </div>
             </div>
             <ul className="dropdown-user_option">

@@ -18,6 +18,13 @@ body{
 .nav-logo{
   margin: 0 15px;
 }
+.nav-logo a{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 ul, li{
   list-style: none;
 }
@@ -249,4 +256,53 @@ a.nav-link{
 .boder-top-bottom{
   border-top: 1px solid rgb(204, 204, 204);
   border-bottom: 1px solid rgb(204, 204, 204);
+}
+/* left sidebar */
+.left-sidebar{
+  height: 100%;
+  position: fixed;
+  box-shadow: 1px 2px 3px rgb(216, 216, 216);
+}
+.scroll-sidebar{
+  height: calc(100% - 20px);
+}
+.leftSideBar-header{
+  height: 130px;
+  background-image: url(./assets/images/imgLeftSideBar.jfif);
+  display: flex;
+  flex-direction: column;
+}
+.leftSideBar-header_small{
+  height: 90px;
+}
+.leftSideBar-header div.profile-user-img{
+  flex-grow: 1;
+}
+.leftSideBar-header div.profile-user-img, .leftSideBar-header div.username{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30px;
+}
+.leftSideBar-header div.profile-user-img img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+.leftSideBar-header div.profile-user-img_small img{
+  width: 40px;
+  height: 40px;
+}
+.leftSideBar-header div.profile-user-img_small{
+  padding-left: 12px;
+}
+.leftSideBar-header div.username{
+  background-color: rgba(0,0,0,.5);
+  height: 32px;
+  color: #fff;
+  font-size: 1.1em;
+}
+.hide{
+  display: none!important;
 }
