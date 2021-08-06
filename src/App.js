@@ -1,10 +1,17 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Topbar from './components/Topbar';
 
 function App() {
   return (
-    <div className="App">
-      Hello word !
-    </div>
+    <Router>
+      <>
+        <Topbar />
+      </>
+      <Switch>
+        <Route path="/" />
+      </Switch>
+    </Router>
   );
 }
 
