@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import { AiOutlineDashboard } from "react-icons/ai";
 import { IoMdChatboxes } from "react-icons/io";
-import { MdEmail, MdContacts, MdKeyboardArrowRight } from "react-icons/md";
+import { MdEmail, MdContacts } from "react-icons/md";
 import { BiCalendarCheck, BiNote } from "react-icons/bi";
 
 const LeftSideBar = (props) => {
