@@ -305,18 +305,41 @@ a.nav-link{
   color: #fff;
   font-size: 1.1em;
 }
+#sidebarnav{
+  height: 100%;
+}
 #sidebarnav li{
   font-size: 1.25em;;
   font-weight: 800;
   color: #607d8b;
-  padding: 10px 0 10px 20px;
   cursor: pointer;
+  
+}
+#sidebarnav li div, #sidebarnav li{
+  border-radius: 4px;
+}
+#sidebarnav li{
+  margin: 5px .5rem;
+  padding: 4px;
+}
+#sidebarnav li div::after{
+  content: ">";
+  font-size: 1.1em;
+  margin-left: 5.8rem;
+  transition: all .3s ease-out;
+}
+#sidebarnav li div.arrowShowOption::after{
+  transform: rotate(-270deg) ;
+}
+#sidebarnav li div.hideArrow::after{
+  display: none;
 }
 #sidebarnav li a, #sidebarnav li div{
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  padding: 10px 0 10px 6px;
 }
 #sidebarnav li:hover{
   color: #21c1d6;
@@ -328,6 +351,41 @@ a.nav-link{
 
 ul.collapse span{
   font-size: .8em;
+}
+.select-navbar{
+  background-color: #21c1d6;
+  color: #fff!important;
+  box-shadow: 0 0 8px rgb(194, 194, 194);
+}
+
+li.select-navbar_child span{
+  color: #000;
+  font-weight: bold;
+}
+/* svg.arrowShowOption{
+  margin-left: 4rem!important;
+} */
+svg.arrowShowOption_downwards{
+  animation-name: arrowDownwards;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+svg.arrowShowOption_toRight{
+  animation-name: arrowToRight;
+  animation-duration: .6s;
+  animation-fill-mode: forwards;
+}
+@keyframes arrowToRight {
+  from{transform: rotate(-270deg)}
+  to{
+    transform: rotate(0deg);
+  }
+}
+@keyframes arrowDownwards {
+  from{transform: rotate(0deg)}
+  to{
+    transform: rotate(-270deg);
+  }
 }
 .hide{
   display: none!important;
