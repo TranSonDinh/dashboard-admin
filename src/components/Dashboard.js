@@ -1,11 +1,13 @@
+import classNames from 'classnames';
+
 import SalesOverview from './SalesOverview';
 import OurVisitors from './OurVisitors';
 
-const Dashboard = () => {
+const Dashboard = (props) => {
     return (
-        <div className="dashboard-wrap">
+        <div className={classNames("dashboard-wrap", { "zoom-out-dash": props.showUserName })} >
             <div className="row">
-                <SalesOverview />
+                <SalesOverview showUserName={props.showUserName} select={props.select} />
                 <OurVisitors />
             </div>
 

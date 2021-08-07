@@ -5,6 +5,7 @@ body{
   font-family: "Poppins",sans-serif;
   color: #000;
   background-color: #eef5f9;
+  max-width: 100%;
 }
 .topbar{
   background-color: #1e88e5;
@@ -275,6 +276,7 @@ a.nav-link{
 }
 .scroll-sidebar{
   height: calc(100% - 20px);
+  overflow: auto;
 }
 .leftSideBar-header{
   height: 130px;
@@ -333,7 +335,7 @@ a.nav-link{
 #sidebarnav li div::after{
   content: ">";
   font-size: 1.1em;
-  margin-left: 5.8rem;
+  margin-left: 5.1rem;
   transition: all .3s ease-out;
 }
 #sidebarnav li div.arrowShowOption::after{
@@ -408,9 +410,12 @@ svg.arrowShowOption_toRight{
   padding: 30px;
   font-size: 1.6em;
 }
+div.zoom-out-dash{
+  margin-left: 240px;
+}
 .row{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-left: -15px;
   margin-right: -15px;
 }

@@ -56,7 +56,7 @@ const data = [
         amt: 0
     }
 ];
-const SalesOverview = () => {
+const SalesOverview = (props) => {
     return (
         <div className="sales-overview-wrap content-wrap">
             <div className="sales-overview_header">
@@ -71,7 +71,7 @@ const SalesOverview = () => {
             </div>
             <div className="sales-chart">
                 <BarChart
-                    width={880}
+                    width={!props.showUserName ? 880 : 700}
                     height={300}
                     data={data}
                     margin={{
