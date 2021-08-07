@@ -4,10 +4,16 @@ body{
   font-size: 12px;
   font-family: "Poppins",sans-serif;
   color: #000;
+  background-color: #eef5f9;
 }
 .topbar{
   background-color: #1e88e5;
   height: 70px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  overflow: hidden;
+  top: 0;
 }
 .top-navbar, .navbarbg, .navbarbg ul{
   display: flex;
@@ -30,7 +36,7 @@ ul, li{
   padding: 0;
   margin: 0;
 }
-h1, h2, h3, h4, h5, p{
+h1, h2, h3, h4, h5,h6, p{
   padding: 0;
   margin: 0;
 }
@@ -264,6 +270,8 @@ a.nav-link{
   height: 100%;
   position: fixed;
   box-shadow: 1px 2px 3px rgb(216, 216, 216);
+  background-color: #fff;
+  z-index: 10;
 }
 .scroll-sidebar{
   height: calc(100% - 20px);
@@ -387,6 +395,61 @@ svg.arrowShowOption_toRight{
     transform: rotate(-270deg);
   }
 }
+
 .hide{
   display: none!important;
+}
+/* dashboard */
+.dashboard-wrap{
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  margin-left: 65px;
+  padding: 30px;
+  font-size: 1.6em;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.content-wrap{
+  background-color: #fff;
+  padding: 1.25rem;
+  flex: 1 1 auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(226, 226, 226);
+  margin: 0px 15px 30px 15px;
+}
+.content-wrap p{
+  font-size: .7em;
+  font-weight: bold;
+  color: #8898aa;
+}
+.sales-overview-wrap, .sales-overview_header{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.sales-overview_header{
+  flex-direction: row;
+  width: 100%;
+}
+.chart-gloss{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.chart-gloss > span{
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/* sale overview chart */
+.sales-chart{
 }
