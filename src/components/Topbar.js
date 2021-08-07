@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../assets/images/logo.png";
 import LogoName from '../assets/images/download.png';
@@ -13,7 +13,7 @@ import LeftSideBar from './LeftSideBar';
 
 import './Responsive.css';
 
-function Topbar() {
+function Topbar(props) {
     const [user, setUser] = useState({ avatar: "avatar.jpg", name: "Dinh", email: "sondinh2703@gmail.com" });
     const [listNoti, setListNoti] = useState([
         { type: "link", title: "Laugh Admin", mail: "Just see my new admin!", time: "9:30 AM" },
@@ -34,8 +34,14 @@ function Topbar() {
 
     const handlesShowName = () => {
         setLogoName(!logoName);
-        if (widthLeft === 65) setWidthLeft(240)
-        else if (widthLeft === 240) setWidthLeft(65);
+        if (widthLeft === 65) {
+            setWidthLeft(240);
+            props.setShowUserName();
+        }
+        else if (widthLeft === 240) {
+            setWidthLeft(65);
+            props.setShowUserName();
+        }
 
     };
     const handlesSelect = () => {
@@ -83,7 +89,7 @@ function Topbar() {
             </header>
             <aside className="left-sidebar" id="sidebarbg" style={{ width: `${widthLeft}px` }}
                 onMouseOver={select ? null : handlesShowName} onMouseOut={select ? null : handlesShowName}>
-                <LeftSideBar showUserName={widthLeft === 65 ? false : true} />
+                <LeftSideBar showUserName={props.showUserName} />
             </aside>
         </>
     );
