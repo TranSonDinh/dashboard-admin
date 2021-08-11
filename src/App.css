@@ -13,7 +13,6 @@ body{
   position: fixed;
   width: 100%;
   z-index: 100;
-  overflow: hidden;
   top: 0;
 }
 .top-navbar, .navbarbg, .navbarbg ul{
@@ -97,6 +96,16 @@ a{
 div.dropdown-user{
   width: 280px;
 }
+.dropdown-menu{
+  min-width: 280px;
+  width: 350px;
+  position: absolute;
+  top: 72px;
+  right: 0px;
+  box-shadow: 0px 0px 10px rgb(223, 223, 223);
+  display: none;
+  background-color: #fff;
+}
 .dropdown-menu ul.dropdown-user_option{
   display: flex;
   padding: 0;
@@ -138,15 +147,6 @@ div.dropdown-user{
 }
 .nav-item a:focus + div.dropdown-menu{
   display: inline;
-}
-.dropdown-menu{
-  min-width: 280px;
-  width: 350px;
-  position: absolute;
-  top: 72px;
-  right: 0px;
-  box-shadow: 0px 0px 10px rgb(223, 223, 223);
-  display: none;
 }
 
 .drop-title{
