@@ -456,5 +456,73 @@ div.zoom-out-dash{
   align-items: center;
 }
 /* sale overview chart */
-.sales-chart{
+
+
+/* feeds notification */
+.feed-notif{
+  width: 28vw;
+}
+.title-notif{
+  font-weight: bold;
+  font-size: .9em;
+  margin-bottom: 20px;
+}
+.content-notif>ul{
+  max-height: 365px;
+  overflow: auto;
+}
+.content-notif>ul>li>a{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-notif>ul>li{
+  padding: 10px 0;
+  border-radius: 4px;
+}
+.content-notif>ul>li:hover{
+  background-color: rgb(233, 247, 250);
+}
+.content-notif>ul>li>a>div{
+  display: flex;
+  align-items: center;
+}
+.notif-icon{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #1e88e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.notifi-text{
+  font-weight: bold;
+  font-size: .7em;
+  margin: 0 10px;
+  max-width: 250px;
+  overflow: hidden;
+}
+.notifi-time{
+  font-weight: bold;
+  color: #8898aa;
+  font-size: .65em;
+  margin-right: 5px;
+}
+.text-center{
+  justify-content: space-around;
+}
+.toltal-data{
+  text-align: center;
+}
+.toltal-data h4{
+  font-size: 36px;
+  color: #455a64;
+}
+.toltal-data small{
+  font-size: .6em;
+  font-weight: bold;
+  color: #67757c;
 }
